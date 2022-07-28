@@ -10,15 +10,14 @@ language: 'en-uk'
 name: 'Finding The Way Home'
 description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
 
-short_url: 'jekyllt.github.io/jasper/'
+short_url: 'slowsortblog.github.io/'
 google_analytics: UA-69281367-1
 disqus: username
-# edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper/
+baseurl: /
 
 # Permalinks
 permalink: /:title
-# permalink: /author/:username
+permalink: /author/:username
 # permalink: /tag/:tag
 
 # gems and other configs
@@ -32,6 +31,7 @@ plugins: [jekyll-paginate]
 # Disqus comments as a per-post basis
 # ...
 
+remote_theme: jekyllt/jasper
 
 # Settings for builing master branch with travis-ci
 # with jekyll-travis
@@ -45,13 +45,11 @@ plugins: [jekyll-paginate]
 # or "master" otherwise
 safe: false
 lsi: false
-username: jekyllt
-repo: jasper
+username: slowsortblog
+repo: slowsortblog.github.io
 branch: master
-relative_source: ../jasper/
-destination: ../jasper-pages/
-production_url:  https://jekyllt.github.io/jasper/
-source_url:  https://github.com/jekyllt/jasper/
+production_url:  https://slowsortblog.github.io
+source_url:  https://github.com/slowsortblog/slowsortblog.github.io/
 
 exclude:
   - README.md
