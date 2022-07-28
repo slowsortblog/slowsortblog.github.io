@@ -7,8 +7,8 @@ paginate: 5
 language: 'en-uk'
 
 # Website info
-name: 'Finding The Way Home'
-description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
+name: 'SlowSort Blog'
+description: "Superficial Thoughts on Blockchains and Philosophy."
 
 short_url: 'slowsortblog.github.io/'
 google_analytics: UA-69281367-1
