@@ -964,7 +964,7 @@ body.nav-opened .nav {
 }
 
 .no-cover.main-header {
-    min-height: 160px;
+    min-height: 40px;
     max-height: 40vh;
     background: #f5f8fa;
 }
@@ -1292,30 +1292,30 @@ body.page-template .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65vh;
-    min-height: 180px;
+    height: 30vh;
+    min-height: 80px;
 }
 
 .no-cover.post-head.main-header {
-    height: 85px;
+    height: 80px;
     min-height: 0;
     margin-bottom: 0;
     background: transparent;
 }
 
 .tag-head.main-header {
-    height: 40vh;
-    min-height: 180px;
+    height: 30vh;
+    min-height: 80px;
 }
 
 .author-head.main-header {
-    height: 40vh;
-    min-height: 180px;
+    height: 30vh;
+    min-height: 80px;
 }
 
 .no-cover.author-head.main-header {
     height: 10vh;
-    min-height: 100px;
+    min-height: 80px;
     background: transparent;
 }
 
