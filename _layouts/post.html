@@ -33,36 +33,19 @@ class: 'post-template'
            {% if authorCount == 0 %}
             No author
            {% elsif authorCount == 1 %}
-             test:
              {% for author in site.data.authors %}
-                {{ author }};
-                {{ author[1].username }};
                 {% if author[1].username == {{ page.authors | first }} %}
                     <a href='{{ site.baseurl }}author/{{ page.authors | first }}'>{{ author[1].name }}</a>
                 {% endif %}
              {% endfor %}
            {% else %}
               {% for author in page.authors %}
-                    {{ author }}, 
-                    {% if forloop.first %}
-                        {% for kauthor in site.data.authors %}
+                    {% for kauthor in site.data.authors %}
+                        {{ kauthor }};
                             {% if kauthor[1].username == {{ author }} %}
                                 <a href='{{ site.baseurl }}author/{{ author }}'>{{ kauthor[1].name }}</a>
                             {% endif %}
-                        {% endfor %}
-                    {% elsif forloop.last %}
-                        and {% for kauthor in site.data.authors %}
-                            {% if kauthor[1].username == {{ author }} %}
-                                <a href='{{ site.baseurl }}author/{{ author }}'>{{ kauthor[1].name }}</a>
-                            {% endif %}
-                        {% endfor %}
-                    {% else %}
-                        ,   {% for kauthor in site.data.authors %}
-                            {% if kauthor[1].username == {{ author }} %}
-                                <a href='{{ site.baseurl }}author/{{ author }}'>{{ kauthor[1].name }}</a>
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
+                     {% endfor %}
                 {% endfor %}
             {% endif %}
                 
