@@ -26,14 +26,42 @@ class: 'post-template'
 
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
-            <section class="post-meta">
+            <section class="post-meta">  
             <!-- <a href='{{ site.baseurl }}{{ page.about }}'>{{ site.author }}</a> -->
-
-            {% for author in site.data.authors %}
-                {% if author[1].username == page.author %}
-                    <a href='{{ site.baseurl }}author/{{ page.author }}'>{{ author[1].name }}</a>
+                
+           {% assign authorCount = page.authors | size %}
+           {% if authorCount == 0 %}
+            No author
+           {% elsif authorCount == 1 %}
+             {% for author in site.data.authors %}
+                {% if author[1].username == {{ page.authors | first }} %}
+                    <a href='{{ site.baseurl }}author/{{ page.authors | first }}'>{{ author[1].name }}</a>
                 {% endif %}
             {% endfor %}
+            {% else %}
+                {% for author in page.authors %}
+                    {% if forloop.first %}
+                        {% for kauthor in site.data.authors %}
+                            {% if kauthor[1].username == {{ author }} %}
+                                <a href='{{ site.baseurl }}author/{{ author }}'>{{ kauthor[1].name }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    {% elsif forloop.last %}
+                        and {% for kauthor in site.data.authors %}
+                            {% if kauthor[1].username == {{ author }} %}
+                                <a href='{{ site.baseurl }}author/{{ author }}'>{{ kauthor[1].name }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        ,   {% for kauthor in site.data.authors %}
+                            {% if kauthor[1].username == {{ author }} %}
+                                <a href='{{ site.baseurl }}author/{{ author }}'>{{ kauthor[1].name }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+                
             <time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">{{ page.date | date_to_string }}</time>
                 <!-- [[tags prefix=" on "]] -->
                 {% if page.tags.size > 0 %}
@@ -66,7 +94,7 @@ class: 'post-template'
                             <a class="img" href="{{ site.baseurl }}author/{{ page.author }}" style="background-image: url({{ site.baseurl }}{{ author[1].assets }})"><span class="hidden">{{ page.author }}'s Picture</span></a>
                         </figure>
                     {% endif %}
-
+           
                     <section class="author">
                         <h4><a href="{{ site.baseurl }}author/{{ page.author }}">{{ author[1].name }}</a></h4>
 
