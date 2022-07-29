@@ -75,15 +75,13 @@ class: 'post-template'
 
             <!-- Everything inside the #author tags pulls data from the author -->
             <!-- #author-->
+            <figure class="author-image">
+                <a class="img" style="background-image: url({{ site.baseurl }}/assets/images/small.jpg)"><span class="hidden">{{ page.author }}'s Picture</span></a>
+            </figure>
+
             {% for pauthor in page.authors %}
             {% for author in site.data.authors %}
                 {% if author[1].username == pauthor %}
-                    {% if author[1].assets %}
-                        <figure class="author-image">
-                            <a class="img" href="{{ site.baseurl }}author/{{ pauthor }}" style="background-image: url({{ site.baseurl }}{{ author[1].assets }})"><span class="hidden">{{ page.author }}'s Picture</span></a>
-                        </figure>
-                    {% endif %}
-           
                     <section class="author">
                         <h4><a href="{{ site.baseurl }}author/{{ pauthor }}">{{ author[1].name }}</a></h4>
 
