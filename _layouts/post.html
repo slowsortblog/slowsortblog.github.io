@@ -33,14 +33,16 @@ class: 'post-template'
            {% if authorCount == 0 %}
             No author
            {% elsif authorCount == 1 %}
+             test:
              {% for author in site.data.authors %}
-                {{ page.authors | first }}
+                {{ author }};
+                {{ author[1].username }};
                 {% if author[1].username == {{ page.authors | first }} %}
                     <a href='{{ site.baseurl }}author/{{ page.authors | first }}'>{{ author[1].name }}</a>
                 {% endif %}
-            {% endfor %}
-            {% else %}
-                {% for author in page.authors %}
+             {% endfor %}
+           {% else %}
+              {% for author in page.authors %}
                     {{ author }}, 
                     {% if forloop.first %}
                         {% for kauthor in site.data.authors %}
