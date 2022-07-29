@@ -35,6 +35,7 @@ class: 'post-template'
            {% else %}
               {% for author in page.authors %}
                     {% for kauthor in site.data.authors %}
+                        {{ kauthor[1].username }} and {{ author }};
                         {% if kauthor[1].username == {{ author }} %}
                             <a href='{{ site.baseurl }}author/{{ author }}'>{{ kauthor[1].name }}</a>,
                         {% endif %}
