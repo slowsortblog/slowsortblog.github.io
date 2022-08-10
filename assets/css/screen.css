@@ -951,6 +951,7 @@ body.nav-opened .nav {
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
     color: #fff;
+    text-shadow: 2px 2px #000000;
 }
 
 .page-description {
@@ -961,6 +962,7 @@ body.nav-opened .nav {
     font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
+    text-shadow: 2px 2px #000000;
 }
 
 .no-cover.main-header {
