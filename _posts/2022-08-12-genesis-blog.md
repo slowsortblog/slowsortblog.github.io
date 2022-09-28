@@ -2,11 +2,10 @@
 layout: post
 cover: false
 navigation: false
-disqus: true
 title: Superficial thoughts on blockchains and philosophy
 date: 2022-09-26 10:18:00
 tags: blockchain philosophy
-subclass: 'post tag-content'
+subclass: 'post tag-content tag-test'
 author: georgy
 categories: georgy
 ---
