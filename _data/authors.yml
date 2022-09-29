@@ -3,15 +3,15 @@ georgy:
   name: Georgy Ishmaev
   location: Delft, Netherlands
   url_full: https://scholar.google.com/citations?user=SyCtvvwAAAAJ&hl=nl&oi=sra
-  url: scholar.google.com
+  url: Google scholar
   bio: Postdoctoral researcher in TU Delft.
-  assets: assets/images/georgy_photo.png
+  assets: 'assets/images/georgy_photo.jpg'
 bulat:
   username: bulat
   name: Bulat Nasrulin
   location: Delft, Netherlands
   url_full: https://scholar.google.com/citations?user=sqLGg2IAAAAJ&hl=nl&oi=ao
-  url: scholar.google.com
+  url: Google scholar 
   bio: Ph.D candidate at TU Delft. Working on  building robust and scalable decentralized systems.
-  assets: assets/images/bulat_photo.jpeg
+  assets: 'assets/images/bulat_photo.jpg'
 
