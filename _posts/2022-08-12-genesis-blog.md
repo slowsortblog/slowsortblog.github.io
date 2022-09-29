@@ -1,12 +1,14 @@
 ---
 layout: post
-cover: false
-navigation: false
+cover: 'assets/images/cover_cosmos.jpg'
+navigation: true
+logo: 'assets/images/logo-short-white.svg'
 title: Superficial thoughts on blockchains and philosophy
 date: 2022-09-26 10:18:00
 tags: blockchain philosophy
 subclass: 'post tag-content tag-test'
-author: georgy
+authors: 
+ - georgy
 categories: georgy
 ---
 
